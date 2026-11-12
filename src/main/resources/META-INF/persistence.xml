@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+
+    <persistence-unit name="triagem" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>br.com.triagemcomunitaria.model.Pessoa</class>
+        <class>br.com.triagemcomunitaria.model.Paciente</class>
+        <class>br.com.triagemcomunitaria.model.Sintoma</class>
+        <class>br.com.triagemcomunitaria.model.Triagem</class>
+        <class>br.com.triagemcomunitaria.model.TriagemAdulto</class>
+        <class>br.com.triagemcomunitaria.model.TriagemPediatrica</class>
+        <class>br.com.triagemcomunitaria.model.SintomaRelatado</class>
+        <class>br.com.triagemcomunitaria.model.ResultadoTriagem</class>
+        <class>br.com.triagemcomunitaria.model.Encaminhamento</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+
+        <properties>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="false"/>
+        </properties>
+    </persistence-unit>
+</persistence>
